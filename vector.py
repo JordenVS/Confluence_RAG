@@ -14,10 +14,6 @@ api_token = os.getenv("CONFLUENCE_API_TOKEN")
 
 import pytesseract
 
-import reportlab.graphics.renderPM as renderPM
-renderPM._renderPMBackend = "bitmap"
-
-
 def createRetriever():
     loader = ConfluenceLoader(
         url="https://europeana.atlassian.net/wiki/",

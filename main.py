@@ -1,24 +1,18 @@
 from langchain_ollama.llms import OllamaLLM
-from langchain_core.prompts import ChatPromptTemplate
+from langchain.vectorstores import Chroma
+from langchain.embeddings import OllamaEmbeddings
+from langchain.chains import RetrievalQA
 from vector import createRetriever
+
+embedding = OllamaEmbeddings(model="nomic-embed-text")
 
 model = OllamaLLM(model = "llama3.2")
 
-template = """
-You are an expert in answering questions about the Europeana Knowledge base
+#retriever = createRetriever()
+vectorstore = Chroma(persist_directory="chroma_db", embedding_function=embedding)
+retriever = vectorstore.as_retriever()
 
-Here are some relevant context chunks: {context}
+qa_chain = RetrievalQA.from_chain_type(llm=model, retriever=retriever)
 
-Here is the question to answer: {question}
-"""
-
-prompt = ChatPromptTemplate.from_template(template)
-chain = prompt | model
-
-result = chain.invoke({"context": [], "question": "What is Europeana?"})
-
-retriever = createRetriever()
-
-
-print(retriever.invoke("The Netherlands"))
-print(result)
+response = qa_chain.run("What are the 3 steps when enriching data with organisation entities?")
+print(response)
