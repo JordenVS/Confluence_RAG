@@ -18,7 +18,7 @@ def createRetriever():
     loader = ConfluenceLoader(
         url="https://europeana.atlassian.net/wiki/",
         username="jordenjessevs@gmail.com", 
-        keep_markdown_format= True,
+    #    keep_markdown_format= True,
         api_key=api_token, cloud= True, space_key="EF", include_attachments=True)
 
     # Necessary for ConfluenceLoader? 
@@ -40,7 +40,7 @@ def createRetriever():
     vectorstore = Chroma.from_documents(
         documents=documentswiki,
         embedding=embedding,
-        persist_directory="chroma_db" 
+        persist_directory="chroma_db_txt" 
     )
 
     # chromadb retriever
