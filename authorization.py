@@ -40,12 +40,12 @@ def getRestrictionsMetadata(page_id):
     # loop over all the parent id's of the page and append all the restrictions for groups and users separately
     cur_id = page_id
     while confluence.get_parent_content_id(cur_id) != -1 and confluence.get_parent_content_id(cur_id) != None:
-        cur_id = confluence.get_parent_content_id(cur_id)
         restr = confluence.get_all_restrictions_for_content(content_id=cur_id)
         for group in restr.get("read").get("restrictions").get("group").get("results"):
             restrictions_groups.append(group.get("name"))
         for user in restr.get("read").get("restrictions").get("user").get("results"):
             restrictions_users.append(user.get("userKey"))
+        cur_id = confluence.get_parent_content_id(cur_id)
     
 
     allowed_groups = []
@@ -61,5 +61,4 @@ def getRestrictionsMetadata(page_id):
         allowed_people = list(set(permissions_users).intersection(restrictions_users))
 
     return (allowed_groups, allowed_people)
-
 
