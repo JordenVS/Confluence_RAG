@@ -1,6 +1,5 @@
 from langchain_ollama import OllamaEmbeddings
 from langchain.vectorstores import Chroma
-from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import ConfluenceLoader
 from dotenv import load_dotenv
@@ -18,9 +17,9 @@ def createRetriever():
     loader = ConfluenceLoader(
         url="https://europeana.atlassian.net/wiki/",
         username="jordenjessevs@gmail.com", 
+        #max_pages = "???"
     #    keep_markdown_format= True,
         api_key=api_token, cloud= True, space_key="EF", include_attachments=True)
-
     # Necessary for ConfluenceLoader? 
     pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
