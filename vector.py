@@ -86,13 +86,20 @@ def createDBs():
     docs.append(docs_mark_mark)
 
     # Use free ollama embedding, should be changed for testing purposes TODO: Make modifiable
-    embedding = OllamaEmbeddings(model="nomic-embed-text")
+    embedding_nomic = OllamaEmbeddings(model="nomic-embed-text")
+    embedding_snow = OllamaEmbeddings(model="snowflake-arctic-embed")
 
     for doc in docs:
         vectorstore = Chroma.from_documents(
             documents=doc,
-            embedding=embedding,
-            persist_directory="chroma_db_${doc}")
+            embedding=embedding_nomic,
+            persist_directory="chroma_nomic_db_${doc}")
+        
+    for doc in docs:
+        vectorstore = Chroma.from_documents(
+            documents=doc,
+            embedding=embedding_snow,
+            persist_directory="chroma_snow_db_${doc}")
     
     return 
 
