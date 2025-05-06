@@ -1,6 +1,7 @@
 from langchain_ollama import OllamaEmbeddings
 from langchain.vectorstores import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_text_splitters import MarkdownTextSplitter
 from langchain_community.document_loaders import ConfluenceLoader
 from dotenv import load_dotenv
 import os
@@ -46,3 +47,52 @@ def createRetriever():
     retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k":6})
 
     return retriever
+
+def createDBs():
+    loader_markdown = ConfluenceLoader(
+        url="https://europeana.atlassian.net/wiki/",
+        username="jordenjessevs@gmail.com", 
+        keep_markdown_format= True,
+        api_key=api_token, cloud= True, space_key="EF", include_attachments=True)
+
+    loader_no_markdown = ConfluenceLoader(
+        url="https://europeana.atlassian.net/wiki/",
+        username="jordenjessevs@gmail.com", 
+        api_key=api_token, cloud= True, space_key="EF", include_attachments=True)
+    # Necessary for ConfluenceLoader? 
+    pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+
+    # Load the documents
+    docs_markdown = loader_markdown.load()
+    docs_no_markdown = loader_no_markdown.load()
+
+    # Initialize the chunker, can choose different chunkers here. TODO: Make modifiable
+    rec_text_splitter_500 = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+    rec_text_splitter_1000 = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+
+    #TODO: MarkdownTextSplitter or MarkdownHeaderTextSplitter
+    mark_text_splitter = MarkdownTextSplitter()
+
+    docs = []
+    docs_rec_500_mark = rec_text_splitter_500.split_documents(docs_markdown)
+    docs.append(docs_rec_500_mark)
+    docs_rec_500_no_mark = rec_text_splitter_500.split_documents(docs_no_markdown)
+    docs.append(docs_rec_500_no_mark)
+    docs_rec_1000_mark = rec_text_splitter_1000.split_documents(docs_markdown)
+    docs.append(docs_rec_1000_mark)
+    docs_rec_1000_no_mark = rec_text_splitter_1000.split_documents(docs_no_markdown)
+    docs.append(docs_rec_1000_no_mark)
+    docs_mark_mark = mark_text_splitter.split_documents(docs_markdown)
+    docs.append(docs_mark_mark)
+
+    # Use free ollama embedding, should be changed for testing purposes TODO: Make modifiable
+    embedding = OllamaEmbeddings(model="nomic-embed-text")
+
+    for doc in docs:
+        vectorstore = Chroma.from_documents(
+            documents=doc,
+            embedding=embedding,
+            persist_directory="chroma_db_${doc}")
+    
+    return 
+
