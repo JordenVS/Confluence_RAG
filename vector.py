@@ -2,6 +2,7 @@ from langchain_ollama import OllamaEmbeddings
 from langchain.vectorstores import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_text_splitters import MarkdownTextSplitter
+from langchain_text_splitters import MarkdownHeaderTextSplitter
 from langchain_community.document_loaders import ConfluenceLoader
 from dotenv import load_dotenv
 import os
@@ -71,7 +72,9 @@ def createDBs():
     rec_text_splitter_1000 = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 
     #TODO: MarkdownTextSplitter or MarkdownHeaderTextSplitter
-    mark_text_splitter = MarkdownTextSplitter()
+    #mark_text_splitter = MarkdownTextSplitter()
+    headers_to_split_on = [("#", "Header 1"),("##", "Header 2"),("###", "Header 3")]
+    mark_text_splitter = MarkdownHeaderTextSplitter(headers_to_split_on)
 
     docs = []
     docs_rec_500_mark = rec_text_splitter_500.split_documents(docs_markdown)
@@ -82,8 +85,18 @@ def createDBs():
     docs.append(docs_rec_1000_mark)
     docs_rec_1000_no_mark = rec_text_splitter_1000.split_documents(docs_no_markdown)
     docs.append(docs_rec_1000_no_mark)
-    docs_mark_mark = mark_text_splitter.split_documents(docs_markdown)
-    docs.append(docs_mark_mark)
+    md_docs = []
+    for doc in docs_markdown:
+        md_doc = mark_text_splitter.split_text(doc)
+        md_docs.extend(md_doc)
+    docs.append(md_docs)
+
+    md_docs_and_rec = []
+    for doc in docs_markdown:
+        md_doc_and_rec = mark_text_splitter.split_text(doc)
+        md_docs_and_rec.extend(md_doc_and_rec)
+    md_docs_and_recs = rec_text_splitter_500.split_documents(md_docs_and_rec)
+    docs.append(md_docs_and_recs)
 
     # Use free ollama embedding, should be changed for testing purposes TODO: Make modifiable
     embedding_nomic = OllamaEmbeddings(model="nomic-embed-text")
