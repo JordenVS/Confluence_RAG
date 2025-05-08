@@ -88,12 +88,16 @@ def createDBs():
     md_docs = []
     for doc in docs_markdown:
         md_doc = mark_text_splitter.split_text(doc)
+        for i in range(len(md_doc)):
+            md_doc[i].metadata = md_doc[i].metadata | doc.metadata
         md_docs.extend(md_doc)
     docs.append(md_docs)
 
     md_docs_and_rec = []
     for doc in docs_markdown:
         md_doc_and_rec = mark_text_splitter.split_text(doc)
+        for i in range(len(md_doc_and_rec)):
+            md_doc_and_rec[i].metadata = md_doc_and_rec[i].metadata | doc.metadata
         md_docs_and_rec.extend(md_doc_and_rec)
     md_docs_and_recs = rec_text_splitter_500.split_documents(md_docs_and_rec)
     docs.append(md_docs_and_recs)
