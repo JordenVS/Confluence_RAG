@@ -1,0 +1,41 @@
+Input Question,LLM Output,Reference Output
+Are there other photograph related rights for in the Netherlands?,"I don't know. The provided text does not mention ""other photograph-related rights"" specifically for the Netherlands. However, it discusses ""Other photographs' related rights"" which seems to be about general provisions for related rights of photographic images, but I couldn't find any specific information on ""other photograph-related rights"".",No
+Did the Netherlands implement Article 14?,"The text does not explicitly state that the Netherlands did or did not implement Article 14. However, it is mentioned that ""In the Memorandum attached to the implementation the minister stated:"" which is followed by a Dutch statement that says ""Het verstrijken van de beschermingstermijn van werken van beeldende kunst leidt ertoe dat die werken tot het publieke domein gaan behoren."" The English translation of this statement suggests that the Netherlands did not implement Article 14 as it is already part of the current act."," ""No as they argue it is already part of the current act"""
+What did the dutch state regarding article 14?,"The Dutch government stated that they did not need to implement Article 14 because it is already part of the current copyright law. They also mentioned in their Memorandum that implementing this article would lead to works of visual art becoming part of the public domain and could be freely reused, which aligns with their existing laws.",The Dutch state stated that they did not implement article 14 arguing that it is already part of the current act and does not need to be explicitly transposed into law. The minister's statement reads: Het verstrijken van de beschermingstermijn van werken van beeldende kunst leidt ertoe dat die werken tot het publieke domein gaan behoren.
+What can be seen on a Europeana usage statistics dashboard?,"A Europeana usage statistics dashboard typically consists of two databoards, which are looped and allow you to switch between them. 
+
+- The first board shows your institution's data, including metrics such as:
+  - Number of visits
+  - Average time on site
+  - Bounce rate
+  - Pageviews
+
+- The second board shows all data made available in Europeana.eu for comparison with your institution's data.
+
+Additionally, you can see insights into how visitors are interacting with your content, including:
+
+- Which items were downloaded or which links were clicked on (although this feature is not currently supported)
+
+- Visits by country and channel
+
+The dashboard uses data from Matomo, an open-source product widely used to track website visitors, and is presented using Databox, a specialized product.",todo
+"What was updated in the document on Jan 28, 2025?","I don't know the answer to that question. The text provided only goes up to January 8, 2024, and there is no information about an update on January 28, 2025.",Link added from the EDM profile for technical metadata to the Media policy and added a note about the incorrect usage of “rdf:resource” with “xml:lang”.
+"What was updated in the document on Dec 17, 2012 and who made those changes?","I don't know the answer to your question as there is no mention of any updates on December 17, 2012, in the provided context. The document history only mentions updates from November 18, 2016, onwards.",Several minor edits from Dan Matei + addition of owl:sameAs to WebResource to create a lightbox track +addition of cc:License class and corresponding amendments to WebResource and Aggregation + addition of summary list of properties per class and related adjustments + removal of table of M and R properties + rearrangement of place of birth and death to match schema + removal of edm:unstored + retained wgs84_pos: form although schema uses only wgs84: by Robina Clayphan
+What are the properties for the edm:TimeSpan class?,"The properties for the edm:TimeSpan class are:
+
+1. edm:begin - The date the timespan started.
+2. edm:end - The date the timespan finished.
+
+These properties are recommended by Europeana and conform to Extended Date/Time Format (EDTF) and ISO 8601, starting with the year and with hyphens (YYYY-MM-DD). Providing both edm:begin and edm:end in combination is also recommended.","Recommended properties: skos:prefLabel, edm:begin, edm:end. Optional properties: skos:altLabel, skos:note, dcterms:hasPart, dcterms:isPartOf, edm:isNextInSequence and owl:sameAs"
+What is especially important for providers who share resources via IIIF?,"Based on the provided context, it appears that one of the key aspects of IIIF is its ability to instruct a server about the desired resolution or image manipulations, such as rotation and zooming. This suggests that clarity and precision are especially important for providers who share resources via IIIF in order to effectively utilize the framework's features.
+
+However, I don't know if this is explicitly stated as ""especially important"" in the context provided, but it seems like a reasonable inference based on the information given about the capabilities of the IIIF standard.",CORS is essential for our IIIF viewer to perform the image information requests and to obtain the presentation manifests.
+What is the entire workflow for making digital images IIIF compliant?,"Based on the provided context, I don't know the answer to this question. The text appears to be a guide or manual for making digital images IIIF-compliant, but it doesn't provide an overview of the entire workflow. It outlines various chapters and topics related to image preparation, metadata creation, web server setup, and image conversion, but it does not present a comprehensive guide for making digital images IIIF-compliant from start to finish.",Web server setup -> Install IIPImage Server -> Convert images to pyramid TIFFS -> Accessing images in the browser via URL -> Accessing images in the browser via Manifest
+What are the 3 key steps for enriching data with organisation entities?,"The three key steps for enriching data with organisation entities, as described in the context provided, are:
+
+1. Analysis of specific metadata fields containing providers' information in the source data.
+2. Automatically matching provided data in the source fields with the entity.
+3. Replacement of source data with the entity and inclusion of the entity as a “foaf:Organization” contextual class within the record.
+
+Please note that these steps were described earlier in the provided context, but they are repeated here for clarity.","1. Analysis of specific metadata fields containing provider's imformation in the source data, followed by the selection of potential organisation entities to enrich the source metadata. 2. Automatically matching provided data in the source fields with the entity. 3. Replacement of source data with the entity and inclusion of the entity as a foaf:Organization"" contextual class within the record."""
+What is the definition of a Literal?,"A Literal, according to the provided DCMI Terms context, is a resource that is included either physically or logically in the CHO (Cultural Heritage Object).","A string value with an optional language tag (taken from ISO639), represented in RDF/XML using the xml:lang attribute. (RDF terminology)"

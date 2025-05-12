@@ -1,0 +1,27 @@
+Input Question,LLM Output,Reference Output
+Are there other photograph related rights for in the Netherlands?,"Yes, according to the table, there are ""Other photographs"" related rights for in the Netherlands, as indicated by the ""Yes"" answer in one of the tables.",No
+Did the Netherlands implement Article 14?,"Yes, according to the provided context, the Netherlands did not need to implement Article 14 as it is already part of the current act, and the Memorandum stated that Article 14 is fully in line with applicable law."," ""No as they argue it is already part of the current act"""
+What did the dutch state regarding article 14?,The Dutch government argued that Article 14 was already part of the current act and therefore did not need to be implemented.,The Dutch state stated that they did not implement article 14 arguing that it is already part of the current act and does not need to be explicitly transposed into law. The minister's statement reads: Het verstrijken van de beschermingstermijn van werken van beeldende kunst leidt ertoe dat die werken tot het publieke domein gaan behoren.
+What can be seen on a Europeana usage statistics dashboard?,"I don't know the answer to that question. The text only provides some general information about what features were considered in previous iterations of the dashboard and mentions that specific details such as item popularity, countries of origin for visitors, and download/ click-through data cannot be shown on the current dashboard. It does not provide a clear description of what can be seen on the Europeana usage statistics dashboard.",todo
+"What was updated in the document on Jan 28, 2025?",I don't know.,Link added from the EDM profile for technical metadata to the Media policy and added a note about the incorrect usage of “rdf:resource” with “xml:lang”.
+"What was updated in the document on Dec 17, 2012 and who made those changes?","According to the document history, the provision on ""copyright"" was updated by Maša Škrinjar in collaboration with Hugo Manguinhas. However, I don't know who specifically made the final page edits, as that information is only mentioned for Adina Ciocoiu's contribution.",Several minor edits from Dan Matei + addition of owl:sameAs to WebResource to create a lightbox track +addition of cc:License class and corresponding amendments to WebResource and Aggregation + addition of summary list of properties per class and related adjustments + removal of table of M and R properties + rearrangement of place of birth and death to match schema + removal of edm:unstored + retained wgs84_pos: form although schema uses only wgs84: by Robina Clayphan
+What are the properties for the edm:TimeSpan class?,"The properties for the edm:TimeSpan class are:
+
+|  |  |
+| --- | --- |
+| **edm:begin** | recommended property |
+| **edm:end** | recommended property |
+| edm:isNextInSequence | optional property |
+| owl:sameAs | optional property |
+
+Note that skos:prefLabel, skos:altLabel, and skos:note are properties for the class of edm:WebResource, not edm:TimeSpan.","Recommended properties: skos:prefLabel, edm:begin, edm:end. Optional properties: skos:altLabel, skos:note, dcterms:hasPart, dcterms:isPartOf, edm:isNextInSequence and owl:sameAs"
+What is especially important for providers who share resources via IIIF?,"According to the text, CORS (Cross-Origin Resource Sharing) is especially important for providers who share resources via IIIF. Without CORS, it's not possible to view the IIIF resources in the Europeana Collections portal.",CORS is essential for our IIIF viewer to perform the image information requests and to obtain the presentation manifests.
+What is the entire workflow for making digital images IIIF compliant?,"I don't know the answer. The provided context only mentions preparing images and metadata for IIIF, but it doesn't describe the entire workflow for making digital images IIIF compliant.",Web server setup -> Install IIPImage Server -> Convert images to pyramid TIFFS -> Accessing images in the browser via URL -> Accessing images in the browser via Manifest
+What are the 3 key steps for enriching data with organisation entities?,"The three key steps for enriching data with organisation entities, as per the provided context, are:
+
+1. Analysis of specific metadata fields containing providers' information in the source data, followed by the selection of potential organisation entities to enrich the source metadata.
+2. Automatically matching provided data in the source fields with the entity.
+3. Replacement of source data with the entity and inclusion of the entity as a “foaf:Organization” contextual class within the record.
+
+I don't know if there are any additional steps or variations depending on specific use cases, but these three steps seem to be the core process for enriching data with organisation entities, based on the provided context.","1. Analysis of specific metadata fields containing provider's imformation in the source data, followed by the selection of potential organisation entities to enrich the source metadata. 2. Automatically matching provided data in the source fields with the entity. 3. Replacement of source data with the entity and inclusion of the entity as a foaf:Organization"" contextual class within the record."""
+What is the definition of a Literal?,"I don't know what the definition of ""Literal"" is based on the provided context.","A string value with an optional language tag (taken from ISO639), represented in RDF/XML using the xml:lang attribute. (RDF terminology)"

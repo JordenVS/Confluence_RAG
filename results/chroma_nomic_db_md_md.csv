@@ -1,0 +1,57 @@
+Input Question,LLM Output,Reference Output
+Are there other photograph related rights for in the Netherlands?,"No, according to the information provided, there are no other photograph-related rights in the Netherlands. Article 14 of the directive states that reproductions of works of visual art are not protected by copyright, and this position is fully in line with applicable law and therefore does not need implementation. This means that unoriginal reproductions of photographs are not considered to have any copyright protection in the Netherlands.",No
+Did the Netherlands implement Article 14?,"Yes, the Netherlands implemented Article 14. According to the text, Article 14 has been transposed into Dutch law and is now Article L 621-42 of [Code du Patrimoine](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074236/LEGISCTA000032857917/#LEGISCTA000032857917). This means that the Netherlands has made changes to its copyright law to align with the provisions of Article 14, which deals with the protection of works in the public domain."," ""No as they argue it is already part of the current act"""
+What did the dutch state regarding article 14?,"The Dutch state regarded Article 14 as not being transposable, as unoriginal reproductions were not protected under the existing French copyright law. This has left a lot of uncertainty regarding whether institutions can claim copyright over reproductions of public domain works in France.",The Dutch state stated that they did not implement article 14 arguing that it is already part of the current act and does not need to be explicitly transposed into law. The minister's statement reads: Het verstrijken van de beschermingstermijn van werken van beeldende kunst leidt ertoe dat die werken tot het publieke domein gaan behoren.
+What can be seen on a Europeana usage statistics dashboard?,"On a Europeana usage statistics dashboard, you can see various metrics about how your institution's content is being interacted with by Europeana's audience. 
+
+Specifically:
+
+- On the first (institutional) board:
+  - Number of visits
+  - Average time spent on site
+  - Bounce rate
+  - Page views
+
+- On the second (global) board:
+  - Total number of visitors
+  - Average time on site
+  - Bounce rate
+  - Page views
+  - Downloads
+  - Click-throughs to provider website
+  - Visits by country
+  - Visits by channel",todo
+"What was updated in the document on Jan 28, 2025?","I don't know what was updated in the document on January 28, 2025. The information provided only includes updates up to January 23, 2025, and does not mention any updates for January 28, 2025.",Link added from the EDM profile for technical metadata to the Media policy and added a note about the incorrect usage of “rdf:resource” with “xml:lang”.
+"What was updated in the document on Dec 17, 2012 and who made those changes?","I don't know. The date of December 17, 2012 is not mentioned in the provided context, and there is no information about updates made to the document on that specific date.",Several minor edits from Dan Matei + addition of owl:sameAs to WebResource to create a lightbox track +addition of cc:License class and corresponding amendments to WebResource and Aggregation + addition of summary list of properties per class and related adjustments + removal of table of M and R properties + rearrangement of place of birth and death to match schema + removal of edm:unstored + retained wgs84_pos: form although schema uses only wgs84: by Robina Clayphan
+What are the properties for the edm:TimeSpan class?,"The properties for the edm:TimeSpan class are:
+
+| Field | Datatype | Description |
+| --- | --- | --- |
+| **edm:begin** | **recommended property** |
+| **edm:end** | **recommended property** |
+| edm:isNextInSequence | optional property |
+| owl:sameAs | optional property |
+
+These properties are part of the EDM metadata record.","Recommended properties: skos:prefLabel, edm:begin, edm:end. Optional properties: skos:altLabel, skos:note, dcterms:hasPart, dcterms:isPartOf, edm:isNextInSequence and owl:sameAs"
+What is especially important for providers who share resources via IIIF?,"Cross-Origin Resource Sharing (CORS). This is essential for the IIIF viewer to perform image information requests and obtain presentation manifests, allowing resources to be viewed in the Europeana Collections portal.",CORS is essential for our IIIF viewer to perform the image information requests and to obtain the presentation manifests.
+What is the entire workflow for making digital images IIIF compliant?,"I don't know the answer to this question. The provided context provides information on the preparation and conversion of images for the IIIF standard, but it does not describe a specific step-by-step workflow for making digital images entirely IIIF-compliant.",Web server setup -> Install IIPImage Server -> Convert images to pyramid TIFFS -> Accessing images in the browser via URL -> Accessing images in the browser via Manifest
+What are the 3 key steps for enriching data with organisation entities?,"The three key steps for enriching data with organisation entities are:
+
+1. Analysis of specific metadata fields containing providers' information in the source data, followed by the selection of potential organisation entities to enrich the source metadata.
+2. Automatically matching provided data in the source fields with the entity.
+3. Replacement of source data with the entity and inclusion of the entity as a “foaf:Organization” contextual class within the record.
+
+These steps are part of a larger process called semantic enrichment, which involves establishing meaningful connections between values in source metadata fields and predefined reference points (target fields) to enrich the data with organisation entities.","1. Analysis of specific metadata fields containing provider's imformation in the source data, followed by the selection of potential organisation entities to enrich the source metadata. 2. Automatically matching provided data in the source fields with the entity. 3. Replacement of source data with the entity and inclusion of the entity as a foaf:Organization"" contextual class within the record."""
+What is the definition of a Literal?,"Unfortunately, this JSON-LD schema doesn't provide a specific definition for the term ""Literal"". However, based on the context and other metadata-related standards, I can offer some information.
+
+In metadata and RDF (Resource Description Framework) terminology, a Literal is a type of value that represents a plain text or numerical value without any additional semantic meaning. Literals are often used to represent data values such as numbers, dates, times, and strings.
+
+Examples of literals include:
+
+* Numbers: ""42"", ""-3.14""
+* Dates: ""2022-07-25"", ""1955-01-01T12:00:00Z""
+* Times: ""14:30:00"", ""23:59:59""
+
+In contrast, other values like references to resources (e.g., URLs), semantic tags (e.g., VIAF or AAT terms), and literals with additional context (e.g., language codes) are considered different types of values.
+
+If you have any further questions or need more clarification, please feel free to ask!","A string value with an optional language tag (taken from ISO639), represented in RDF/XML using the xml:lang attribute. (RDF terminology)"

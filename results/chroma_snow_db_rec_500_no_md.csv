@@ -1,0 +1,33 @@
+Input Question,LLM Output,Reference Output
+Are there other photograph related rights for in the Netherlands?,"Yes, according to the text, there are provisions related to ""other photographs"" in the Netherlands. The revised provision on copyright includes a section that deals with the protection of works other than works of visual art, which appears to include photographs. However, I couldn't find explicit information on what specifically is covered under the term ""other photographs"".",No
+Did the Netherlands implement Article 14?,"Yes, according to the text, the Netherlands implemented Article 14, but with a caveat. The minister stated that since Article 14 was already part of the current act, there was no need to implement it separately."," ""No as they argue it is already part of the current act"""
+What did the dutch state regarding article 14?,"I don't know what the Dutch state (or government) regarded Article 14. The provided overview only includes general information about how different countries have addressed Article 14, but it does not specify what the Netherlands has done specifically.",The Dutch state stated that they did not implement article 14 arguing that it is already part of the current act and does not need to be explicitly transposed into law. The minister's statement reads: Het verstrijken van de beschermingstermijn van werken van beeldende kunst leidt ertoe dat die werken tot het publieke domein gaan behoren.
+What can be seen on a Europeana usage statistics dashboard?,"The four metrics shown on this board in four separate widgets are:
+
+1. No. of visits
+2. Average Time
+3. Bounce Rate
+4. Pageviews.
+
+Each databoard is set up to show the numbers for the last month, but there may be variations if an institution has published data under different names in the past.",todo
+"What was updated in the document on Jan 28, 2025?","I don't know what was updated in the document on January 28, 2025. The provided context appears to be a fragment of a digital document or website, but it doesn't specify any updates made on that particular date.",Link added from the EDM profile for technical metadata to the Media policy and added a note about the incorrect usage of “rdf:resource” with “xml:lang”.
+"What was updated in the document on Dec 17, 2012 and who made those changes?","I don't know, because there is no information about any update to the document on December 17, 2012. The earliest update mentioned is from v2.1, which was made by Robina Clayphan on December 17, 2014. There is no record of an update on December 17, 2012.",Several minor edits from Dan Matei + addition of owl:sameAs to WebResource to create a lightbox track +addition of cc:License class and corresponding amendments to WebResource and Aggregation + addition of summary list of properties per class and related adjustments + removal of table of M and R properties + rearrangement of place of birth and death to match schema + removal of edm:unstored + retained wgs84_pos: form although schema uses only wgs84: by Robina Clayphan
+What are the properties for the edm:TimeSpan class?,"According to the context, I don't know the specific properties for the EDM:TimeSpan class. However, I can tell you that there is a property called edm:begin and edm:end for this class, which Europeana recommends for date conforming to ISO 8601 starting with the year and with hyphens (YYYY-MMDD).","Recommended properties: skos:prefLabel, edm:begin, edm:end. Optional properties: skos:altLabel, skos:note, dcterms:hasPart, dcterms:isPartOf, edm:isNextInSequence and owl:sameAs"
+What is especially important for providers who share resources via IIIF?,I don't know.,CORS is essential for our IIIF viewer to perform the image information requests and to obtain the presentation manifests.
+What is the entire workflow for making digital images IIIF compliant?,"Based on the provided context, it appears that the entire workflow for making digital images IIIF compliant involves several steps:
+
+1. Running a web server and a IIIF-compatible image server.
+2. Providing images in a multi-resolution format (pyramid TIFFs).
+3. Preparing metadata that is IIIF-compliant.
+
+However, I don't know the specific order or detailed steps involved in this workflow, as the provided text only mentions these general requirements without outlining the exact sequence of actions.",Web server setup -> Install IIPImage Server -> Convert images to pyramid TIFFS -> Accessing images in the browser via URL -> Accessing images in the browser via Manifest
+What are the 3 key steps for enriching data with organisation entities?,"The three key steps for enriching data with organisation entities are:
+
+1. Analysis of specific metadata fields containing providers' information in the source data
+2. Automatically matching provided data in the source fields with the entity
+3. Replacement of source data with the entity and inclusion of the entity as a “foaf:Organization” contextual class within the record","1. Analysis of specific metadata fields containing provider's imformation in the source data, followed by the selection of potential organisation entities to enrich the source metadata. 2. Automatically matching provided data in the source fields with the entity. 3. Replacement of source data with the entity and inclusion of the entity as a foaf:Organization"" contextual class within the record."""
+What is the definition of a Literal?,"I don't know. The provided context seems to be from an RDF/XML document and doesn't explicitly define what a ""Literal"" means. However, based on general knowledge, I can try to provide some possible clues.
+
+In RDF and RDF/XML, a Literal is typically considered a value that is represented as a string literal or other data type, rather than being a resource itself. This includes values such as strings, numbers, dates, etc.
+
+However, without more specific information or context from the provided document, I don't have enough knowledge to provide a definitive answer to what constitutes a Literal in this particular case.","A string value with an optional language tag (taken from ISO639), represented in RDF/XML using the xml:lang attribute. (RDF terminology)"

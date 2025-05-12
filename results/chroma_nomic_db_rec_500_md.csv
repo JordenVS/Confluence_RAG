@@ -1,0 +1,37 @@
+Input Question,LLM Output,Reference Output
+Are there other photograph related rights for in the Netherlands?,"I don't know. The provided text only discusses related rights for ""other photographs"" in Luxembourg and Belgian legislation, but does not mention any information about the Netherlands.",No
+Did the Netherlands implement Article 14?,The Netherlands did not implement article 14 as it is already part of the current act.," ""No as they argue it is already part of the current act"""
+What did the dutch state regarding article 14?,"The Dutch state regarded Article 14 as already part of the current act, specifically stating that it is ""geheel in lijn met het geldende recht"" (fully in line with applicable law) and therefore does not need implementation.",The Dutch state stated that they did not implement article 14 arguing that it is already part of the current act and does not need to be explicitly transposed into law. The minister's statement reads: Het verstrijken van de beschermingstermijn van werken van beeldende kunst leidt ertoe dat die werken tot het publieke domein gaan behoren.
+What can be seen on a Europeana usage statistics dashboard?,"According to the provided context, a Europeana usage statistics dashboard shows two databoards:
+
+1. Your institution's databoard:
+	* Eight metrics shown in eight separate widgets, including total number of visitors, average time on site, bounce rate, pageviews, downloads, click-through to provider website, visits by country, and visits by channel.
+2. The Europeana Board:
+	* Four metrics shown in four separate widgets: No. of visits, Average Time, Bounce Rate, Pageviews.
+
+Additionally, the dashboard also shows a comparison between your institution's data and all data made available on Europeana.eu.",todo
+"What was updated in the document on Jan 28, 2025?",I don't know. The information available only goes up to December 2023 and there is no mention of any updates or changes made after that date.,Link added from the EDM profile for technical metadata to the Media policy and added a note about the incorrect usage of “rdf:resource” with “xml:lang”.
+"What was updated in the document on Dec 17, 2012 and who made those changes?","I don't know. The date ""17/12/2014"" is mentioned as a change since v2.1, but I don't see any information about an update on December 17, 2012.",Several minor edits from Dan Matei + addition of owl:sameAs to WebResource to create a lightbox track +addition of cc:License class and corresponding amendments to WebResource and Aggregation + addition of summary list of properties per class and related adjustments + removal of table of M and R properties + rearrangement of place of birth and death to match schema + removal of edm:unstored + retained wgs84_pos: form although schema uses only wgs84: by Robina Clayphan
+What are the properties for the edm:TimeSpan class?,"The properties for the edm:TimeSpan class are:
+
+|  |  |
+| --- | --- |
+| **skos:prefLabel** | recommended property |
+| skos:altLabel | optional property |
+| skos:note | optional property |
+| dcterms:hasPart | optional property |
+| dcterms:isPartOf | optional property |
+| **edm:begin** | recommended property |
+| **edm:end** | recommended property |
+| edm:isNextInSequence | optional property |
+| owl:sameAs | optional property |","Recommended properties: skos:prefLabel, edm:begin, edm:end. Optional properties: skos:altLabel, skos:note, dcterms:hasPart, dcterms:isPartOf, edm:isNextInSequence and owl:sameAs"
+What is especially important for providers who share resources via IIIF?,"I don't know. The text doesn't specify what's especially important for providers who share resources via IIIF. It mentions that they should deliver their resources over HTTPS to avoid issues, but it doesn't provide further information on the specific requirements or considerations for providers sharing resources via IIIF.",CORS is essential for our IIIF viewer to perform the image information requests and to obtain the presentation manifests.
+What is the entire workflow for making digital images IIIF compliant?,"I don't know the answer. The text only provides context and information about the process of preparing images and metadata for IIIF, but it doesn't describe the entire workflow for making digital images IIIF-compliant in detail.",Web server setup -> Install IIPImage Server -> Convert images to pyramid TIFFS -> Accessing images in the browser via URL -> Accessing images in the browser via Manifest
+What are the 3 key steps for enriching data with organisation entities?,"According to the context provided, the three key steps for enriching data with organisation entities are:
+
+1. Analysis of specific metadata fields containing providers' information in the source data, followed by the selection of potential organisation entities to enrich the source metadata.
+2. Automatically matching provided data in the source fields with the entity.
+3. Replacement of source data with the entity and inclusion of the entity as a “foaf:Organization” contextual class within the record.
+
+However, it's worth noting that these steps are not explicitly stated in the text but rather implied through the explanation of the enrichment process.","1. Analysis of specific metadata fields containing provider's imformation in the source data, followed by the selection of potential organisation entities to enrich the source metadata. 2. Automatically matching provided data in the source fields with the entity. 3. Replacement of source data with the entity and inclusion of the entity as a foaf:Organization"" contextual class within the record."""
+What is the definition of a Literal?,"A Literal is a string value with an optional language tag, taken from ISO639, represented in RDF/XML using the xml:lang attribute. (RDF terminology)","A string value with an optional language tag (taken from ISO639), represented in RDF/XML using the xml:lang attribute. (RDF terminology)"
